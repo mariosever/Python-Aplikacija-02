@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content  %}
+
+<h1>Početna</h1>
+
+{% if korisnik %}
+
+    <h2>Pozdrav {{ korisnik }}</h2>
+
+{% else %}
+
+    <h2>Ulogirajte se na stranicu!</h2>
+
+{% endif %}
+
+<p>Dobrodošli na web aplikaciju!</p>
+
+
+<form action="/kontakt" method="post">
+
+   <input type="text" name="contact-name" placeholder="Unesi ime">
+   <br>
+
+   <input type="text" name="contact-email" placeholder="Unesi email adresu">
+   <br>
+
+   <button type="submit">Pošalji</button>
+
+</form>
+
+
+
+{% endblock content %}

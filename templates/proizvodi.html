@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content  %}
+
+<h1>Proizvodi</h1>
+
+<p>Pogledajte naše proizvode:</p>
+
+{% for x in proizvodi %}
+
+    <p> {{ x }} </p>
+
+{% endfor %}
+
+
+{% endblock content %}
